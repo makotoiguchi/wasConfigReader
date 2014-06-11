@@ -1,0 +1,32 @@
+Example Cell config foler:
+    /opt/IBM/WebSphere/AppServer/profiles/<Profile>/config/cells/<Cell config folder>
+
+<Cell config folder>/
+¦   cell.xml
+¦   security.xml
+¦   virtualhosts.xml
+¦   libraries.xml
+¦   resources.xml
+¦   variables.xml
+¦   
++---clusters
+¦   +---<Cluster config folder>/
+¦           cluster.xml
+¦           libraries.xml
+¦           resources.xml
+¦           variables.xml
+¦           
++---nodes
+    +---<Node config folder>/
+        +   node.xml
+        ¦   libraries.xml
+        ¦   resources.xml
+        ¦   variables.xml
+        ¦   systemapps.xml
+        ¦   serverindex.xml
+        ¦
+        +---servers
+            +---<Server/JVM config folder>/
+                    server.xml
+                    resources.xml
+                    variables.xml

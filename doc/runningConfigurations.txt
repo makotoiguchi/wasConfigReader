@@ -1,0 +1,27 @@
+Running Configurations:
+
+- Reader:
+	<cell config folder>
+	Example: "C:\Projects\WebSphere MPA\original was"
+or
+
+	<cell config folder> <output text file>
+	Example: "C:\Projects\WebSphere MPA\original was" "C:\Projects\WebSphere MPA\original was\originalWas-output.txt" 
+
+- Compare:
+	<source cell config folder> <destination cell config folder> <output folder for text files>
+	Example: "C:\Projects\WebSphere MPA\original was" "C:\Projects\WebSphere MPA\new was" "C:\Projects\WebSphere MPA\comparison"
+	
+		- output files:
+				config-<source's folder name>.txt
+				config-<destination's folder name>.txt
+				diff-<source's folder name>.txt
+				diff-<destination's folder name>.txt
+				common-<source's folder name>-<destination's folder name>.txt
+				
+		- Examples:
+				config-original was.txt
+				config-new was.txt
+				diff-original was.txt
+				diff-new was.txt
+				common-original was-new was.txt
