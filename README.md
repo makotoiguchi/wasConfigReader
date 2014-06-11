@@ -7,55 +7,70 @@ Superficially compares two was configurations.
 # Running Configurations
 
 * Target class: Reader
-   * Arguments: <cell config folder>
-   * Example: "C:\Projects\WebSphere MPA\original was"
-    
-   * Arguments: <cell config folder> <output text file>
-   * Example: "C:\Projects\WebSphere MPA\original was" "C:\Projects\WebSphere MPA\original was\originalWas-output.txt"
+  * Arguments: 
+
+  `<cell config folder>`
+
+  `"C:\Projects\WebSphere MPA\original was"`
+  
+  * Arguments: 
+
+  `<cell config folder> <output text file>`
+
+  `"C:\Projects\WebSphere MPA\original was" "C:\Projects\WebSphere MPA\original was\originalWas-output.txt"`
 
 * Target class: Compare
-   * Arguments: <source cell config folder> <destination cell config folder> <output folder for text files>
-   * Example: "C:\Projects\WebSphere MPA\original was" "C:\Projects\WebSphere MPA\new was" "C:\Projects\WebSphere MPA\comparison"
-   * Output files:
-      * config-<source's folder name>.txt
-      * config-<destination's folder name>.txt
-      * diff-<source's folder name>.txt
-      * diff-<destination's folder name>.txt
-      * common-<source's folder name>-<destination's folder name>.txt
-   * Examples:
-      * config-original was.txt
-      * config-new was.txt
-      * diff-original was.txt
-      * diff-new was.txt
-      * common-original was-new was.txt
+  * Arguments:
+
+  `<source cell config folder> <destination cell config folder> <output folder for text files>`
+
+  `"C:\Projects\WebSphere MPA\original was" "C:\Projects\WebSphere MPA\new was" "C:\Projects\WebSphere MPA\comparison"`
+
+  * Output files:
+
+  ```
+  config-<source's folder name>.txt
+  config-<destination's folder name>.txt
+  diff-<source's folder name>.txt
+  diff-<destination's folder name>.txt
+  common-<source's folder name>-<destination's folder name>.txt
+  ```
+
+  ```
+  config-original was.txt
+  config-new was.txt
+  diff-original was.txt
+  diff-new was.txt
+  common-original was-new was.txt
+  ```
 
 
 # Expected XML Configuration Tree Structure
 ```
 <Cell config folder>/
-¦   cell.xml
-¦   security.xml
-¦   virtualhosts.xml
-¦   libraries.xml
-¦   resources.xml
-¦   variables.xml
-¦   
+|   cell.xml
+|   security.xml
+|   virtualhosts.xml
+|   libraries.xml
+|   resources.xml
+|   variables.xml
+|   
 +---clusters
-¦   +---<Cluster config folder>/
-¦           cluster.xml
-¦           libraries.xml
-¦           resources.xml
-¦           variables.xml
-¦           
+|   +---<Cluster config folder>/
+|           cluster.xml
+|           libraries.xml
+|           resources.xml
+|           variables.xml
+|           
 +---nodes
     +---<Node config folder>/
-        +   node.xml
-        ¦   libraries.xml
-        ¦   resources.xml
-        ¦   variables.xml
-        ¦   systemapps.xml
-        ¦   serverindex.xml
-        ¦
+        |   node.xml
+        |   libraries.xml
+        |   resources.xml
+        |   variables.xml
+        |   systemapps.xml
+        |   serverindex.xml
+        |
         +---servers
             +---<Server/JVM config folder>/
                     server.xml
