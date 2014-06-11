@@ -1,4 +1,4 @@
-Example Cell config foler:
+Example Cell config folder:
     /opt/IBM/WebSphere/AppServer/profiles/<Profile>/config/cells/<Cell config folder>
 
 <Cell config folder>/
